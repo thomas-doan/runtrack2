@@ -4,8 +4,6 @@ $bool2 = false;
 $entier = 69;
 $chaineDeC = "Cookie + brownie = BROOKIE";
 $virguleF = 1.234;
-
-
 ?>
 
 
@@ -29,7 +27,6 @@ $virguleF = 1.234;
                     <th scope="col">Type</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Valeur</th>
-
                 </tr>
             </thead>
             <tbody>
