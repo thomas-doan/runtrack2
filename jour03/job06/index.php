@@ -1,8 +1,12 @@
 <?php
-    $ages = [];
-    $text = "toto";
-    $text2 = "titi";
+$str = "Les choses que l'on possede finissent par nous posseder.";
 
-    
-    $ages[] = [ 0 => $text];
-    var_dump ($ages);
+$i = -1;
+
+while (isset($str[$i])) {
+   
+
+    echo "{$str[$i]}";
+
+     $i--;
+}
