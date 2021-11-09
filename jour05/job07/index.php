@@ -1,7 +1,7 @@
 <?php
 
 
-$str = "wxyz";
+$str = "Sport thomas isKs John Vacum";
 
 /* echo gras($str)."</br>";
 
@@ -9,7 +9,7 @@ $test ="A";
  */
 /* echo ord($test); */
 
-echo cesar($str);
+echo gras($str);
 
 
 function cesar($str)
@@ -49,7 +49,7 @@ function cesar($str)
                   echo $mini[$k +2 ];
                 }
                   
-                elseif (isset($mini[$k+6]) > 26) {
+                elseif (isset($mini[$k+6]) > isset($mini[25])) {
                
                     echo "testff";
                 } 
@@ -79,8 +79,8 @@ function gras($str)
 
         for ($k = 0; $maju[$k]; $k++) {
 
-            if ($str[$i] == $maju[$k] && $str[0] == $str[$i])
-            /*    if ($str[0] == $maju[$k])  */ {
+             if ($str[$i] == $maju[$k] && $str[0] == $str[$i]) 
+              /*   if ($str[0] == $maju[$k])  */   {
 
                 echo "<b>";
             } elseif ($str[$i] == $maju[$k]  && $str[$i - 1] == $mini[26]) {
