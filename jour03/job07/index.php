@@ -1,7 +1,7 @@
 <?php
 
 //version courte//
-$str = "Certaines choses changent, et d'autres
+/* $str = "Certaines choses changent, et d'autres
 ne changeront jamais.";
 
 $i = 1;
@@ -14,13 +14,14 @@ echo "{$str[$i]}";
    
 }
 
- echo "{$str[0]}";
+ echo "{$str[0]}"; */
 
 
 
 
-/* //version longue//
-$i = 0;
+ //version longue//
+ $str = "Certaines choses changent, et d'autres";
+ $i = 0;
 $j = 1;
 while(
     isset($str[$j])
@@ -37,4 +38,4 @@ echo $str[$i];
 
 }
 
- echo $str[$i+1];  */
+ echo $str[$i+1];   

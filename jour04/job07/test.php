@@ -36,20 +36,19 @@ $m = 0;
 
     $nbrHaHaut = 1;
     $nbrHaBas = 1;
-    /* echo nbrEsp($i) . "/" . "$bsn" . "</br>"; */
+    echo nbrEsp($i) . "/" . "$bsn" . "</br>";
    /*  $ligneH=$_POST['largeur']; */
-   $ligneH = $j;
-    $ligneH = ($ligneH/2)-2;
-    $espaceDec =$i;
+   $ligneH = ($i-2)/2;
+    $espaceDec =$i-2;
 
-      while ($nbrHaHaut <= $j){
+      while ($nbrHaHaut < $j){
          echo nbrEsp($espaceDec); 
          echo "/";
           echo nbrligneHaut($ligneH);
-          echo " $bsn"; 
+          echo "$bsn"; 
             echo"</br>";
         $nbrHaHaut++;
-        $ligneH = $ligneH + 2;
+        $ligneH = $ligneH +2;
         $espaceDec = $espaceDec - 2 ;
         
     }  
@@ -59,7 +58,7 @@ $m = 0;
     ///------------BAS---------------------MAISOOON------------------------/////////////
     while ($nbrHaBas < $j) {
         echo "|";
-        echo nbrligne($i);
+        echo nbrEsp($i * 1.80);
         echo "|";
         echo "</br>";
         $nbrHaBas++;
@@ -80,7 +79,7 @@ if (isset($_POST['largeur'])) {
 function nbrligne($nbr)
 {
     $largini = 1;
-    while ($largini <= $nbr -2 ) {
+    while ($largini <= $nbr - 2) {
         echo "_";
         $largini++;
     }
@@ -89,7 +88,7 @@ function nbrligne($nbr)
 function nbrligneHaut($nbr)
 {
     $largini = 1;
-    while ($largini < $nbr) {
+    while ($largini <= $nbr-2) {
         echo "_";
         $largini++;
     }
@@ -98,7 +97,7 @@ function nbrligneHaut($nbr)
 
 function nbrEsp($nbr)
 {
-    $largini = 0;
+    $largini = 1;
     while ($largini <= $nbr - 2) {
         echo "&nbsp";
         $largini++;
