@@ -83,6 +83,7 @@ function gras($str)
               /*   if ($str[0] == $maju[$k])  */   {
 
                 echo "<b>";
+
             } elseif ($str[$i] == $maju[$k]  && $str[$i - 1] == $mini[26]) {
 
                 echo "<b>" . "$str[$i]";
@@ -93,7 +94,7 @@ function gras($str)
             if ($str[$i] == $maju[$k]  && $str[$i - 1] !== $mini[26]) {
 
                 echo "$str[$i]";
-            } elseif ($str[$i] == $mini[26]) {
+            } elseif ($str[$i] == $mini[($)]) {
                 echo "</b>";
             }
         }
