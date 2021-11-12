@@ -4,10 +4,8 @@ $bdd = mysqli_connect('localhost', 'root', 'azerty', 'jour08')) {
 Mysqli_set_charset($bdd, 'utf8');
 // Si la connexion a réussi, rien ne se passe.
 //Requête: 
-$requete = mysqli_query($bdd,  "SELECT * FROM etudiants"); //excepter une requête
-/* $index = mysqli_fetch_assoc($requete); //récupérer ce que la requête renvoi "fetch" */
+$requete = mysqli_query($bdd,  "SELECT COUNT(*) AS nb FROM etudiants;"); //excepter une requête
 $etudiants = mysqli_fetch_all($requete, MYSQLI_ASSOC); //récupérer ce que la requête renvoi "fetch"
-
 
 }
 
@@ -26,7 +24,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>exo 1</title>
+    <title>exo 6</title>
 </head>
 
 <body>
@@ -36,22 +34,16 @@ else {
 
             <thead>
           
-            <th scope="col">Nom</th>
-            <th scope="col">Prenom</th>
-            <th scope="col">Naissance</th>
-            <th scope="col">Sexe</th>
-            <th scope="col">Email</th>
+            <th scope="col">nb_etudiants</th>
             
             </thead>
             <tbody>
 
             <?php foreach ($etudiants as $etudiant) {  ?>
                     <tr>
-                        <td> <?= $etudiant['nom']; ?> </td>
-                        <td> <?= $etudiant['prenom']; ?> </td>
-                        <td> <?= $etudiant['naissance']; ?> </td>
-                        <td> <?= $etudiant['sexe']; ?> </td>
-                        <td> <?= $etudiant['email']; ?> </td>
+                        <td> <?= $etudiant['nb']; ?> </td>
+         
+                       
                     </tr>
                     <?php }; ?>
             </tbody>
