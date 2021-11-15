@@ -12,43 +12,43 @@ function leetspeak($str)
         switch ($str[$i]) {
             case "a":
             case "A":
-                $str[$i]="4";
+                $str[$i] = "4";
                 break;
 
             case "b":
             case "B":
-                $str[$i]="8";
+                $str[$i] = "8";
                 break;
 
             case "e":
             case "E":
-                $str[$i]="3";
+                $str[$i] = "3";
                 break;
 
 
             case "g":
             case "G":
-                $str[$i]="6";
+                $str[$i] = "6";
                 break;
 
             case "l":
             case "L":
-                $str[$i]="1";
+                $str[$i] = "1";
                 break;
 
             case "s":
             case "S":
-                $str[$i]="5";
+                $str[$i] = "5";
                 break;
 
             case "t":
             case "T":
-                $str[$i]="I";
+                $str[$i] = "I";
                 break;
 
 
             default;
-        
+
                 break;
         }
     }

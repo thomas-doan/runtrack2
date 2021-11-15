@@ -4,7 +4,7 @@ $bdd = mysqli_connect('localhost', 'root', 'azerty', 'jour08')) {
 Mysqli_set_charset($bdd, 'utf8');
 // Si la connexion a réussi, rien ne se passe.
 //Requête: 
-$requete = mysqli_query($bdd,  "SELECT prenom, nom, naissance FROM etudiants WHERE sexe = 'Femme'"); //excepter une requête
+$requete = mysqli_query($bdd,  "SELECT prenom, nom, naissance, sexe, email, id FROM etudiants WHERE sexe = 'Femme'"); //excepter une requête
 $etudiants = mysqli_fetch_all($requete, MYSQLI_ASSOC); //récupérer ce que la requête renvoi "fetch"
 
 }
@@ -37,6 +37,10 @@ else {
             <th scope="col">Nom</th>
             <th scope="col">Prenom</th>
             <th scope="col">Date de naissance</th>
+            <th scope="col">sexe</th>
+            <th scope="col">email</th>
+            <th scope="col">id</th>
+
             
             </thead>
             <tbody>
@@ -46,7 +50,9 @@ else {
                         <td> <?= $etudiant['nom']; ?> </td>
                         <td> <?= $etudiant['prenom']; ?> </td>
                         <td> <?= $etudiant['naissance']; ?> </td>
-                       
+                        <td> <?= $etudiant['sexe']; ?> </td>
+                        <td> <?= $etudiant['email']; ?> </td>
+                        <td> <?= $etudiant['id']; ?> </td>
                     </tr>
                     <?php }; ?>
             </tbody>

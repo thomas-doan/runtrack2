@@ -38,6 +38,7 @@ if (
                 <th scope="col">Naissance</th>
                 <th scope="col">Sexe</th>
                 <th scope="col">Email</th>
+                <th scope="col">id</th>
 
             </thead>
             <tbody>
@@ -49,6 +50,7 @@ if (
                         <td> <?= $etudiant['naissance']; ?> </td>
                         <td> <?= $etudiant['sexe']; ?> </td>
                         <td> <?= $etudiant['email']; ?> </td>
+                        <td> <?= $etudiant['id']; ?> </td>
                     </tr>
                 <?php }; ?>
             </tbody>

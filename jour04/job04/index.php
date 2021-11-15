@@ -1,12 +1,9 @@
 <pre>
 <?php
-
 /* foreach ($_POST as $key => $value) {
     echo 'argument est: ' . $key . "</br>";
     echo 'valeur est: ' . $value . "</br>";
 } */
-
-
 ?>
 
 </pre>
@@ -50,10 +47,11 @@
         <div class="container">
             <table>
 
-            <?php 
-
-                if (isset($_POST["Nom"]) && isset($_POST["Prenom"]) && isset($_POST["Age"])) {
-                ?>
+            <?php if (
+              isset($_POST["Nom"]) &&
+              isset($_POST["Prenom"]) &&
+              isset($_POST["Age"])
+            ) { ?>
 
                 <thead>
                     <tr>
@@ -63,18 +61,14 @@
                 </thead> 
                 <tbody>
                     
-                    <?php 
-                            foreach ($_POST as $key => $value){
-                                
-                                echo " 
+                    <?php foreach ($_POST as $key => $value) {
+                      echo " 
                                 <tr>
                                 <th scope='row'>$key</th>
                                 <td>$value</td>
                                 </tr>
                                 ";
-                            }
-                        }
-                        ?>
+                    }} ?>
                         
                 </tbody>
                 
